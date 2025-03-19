@@ -48,3 +48,33 @@ export default tseslint.config({
   },
 })
 ```
+
+## Deploying the Project to Firebase
+
+Follow these steps to deploy the project to Firebase:
+
+1. Install Firebase CLI globally:
+   ```bash
+   npm install -g firebase-tools
+   ```
+2. Log in to your Firebase account:
+  ```bash
+  firebase login
+  ```
+3. Initialize Firebase in your project:
+  ```bash
+  firebase init
+  ```
+  * Select "Hosting" when prompted.
+  * Choose the Firebase project you want to deploy to.
+  * Set the build directory as the public directory (if using yarn build).
+  * Configure it as a single-page app by answering "Yes" to the SPA question.
+
+4. Build the project:
+  ```bash
+  yarn build
+  ```
+5. Deploy the project to Firebase:
+  ```bash
+  firebase deploy
+  ```
