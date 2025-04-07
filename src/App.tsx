@@ -1,23 +1,21 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import MenuBook from "./components/MenuBook";
-
-import ramallahMenu from "./assets/menu/ramallah";
-import nablusMenu from "./assets/menu/nablus";
+import Ramallah from "./pages/Ramallah";
+import Nablus from "./pages/Nablus";
+import { ThemeProvider } from "@mui/material/styles";
+import theme from "./theme";
 
 const App: React.FC = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/nablus" element={<MenuBook menuImages={nablusMenu} />} />
-        <Route
-          path="/ramallah"
-          element={<MenuBook menuImages={ramallahMenu} />}
-        />
-      </Routes>
-    </Router>
+    <ThemeProvider theme={theme}>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/ramallah" element={<Ramallah />} />
+          <Route path="/nablus" element={<Nablus />} />
+        </Routes>
+      </Router>
+    </ThemeProvider>
   );
 };
 

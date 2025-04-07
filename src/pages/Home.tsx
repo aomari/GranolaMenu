@@ -1,12 +1,16 @@
-import React from "react";
-import homeImage from "../assets/home-image.jpeg"; // Replace with your home page image
-import "./Home.css";
+import { Box } from "@mui/material";
 
 const Home: React.FC = () => {
   return (
-    <div className="home-container">
-      <img src={homeImage} alt="Granola" className="home-image" />
-    </div>
+    <Box
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
+      height="100vh"
+      bgcolor="#f5f5f5"
+    >
+      <img src="/images/Ramallah/Granola Menu Ramallah price-00.jpg" alt="Granola Logo" style={{ maxWidth: "300px" }} />
+    </Box>
   );
 };
 

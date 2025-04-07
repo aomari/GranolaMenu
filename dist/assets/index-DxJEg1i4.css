@@ -1,0 +1,1 @@
+html,body,#root{height:100%;margin:0;padding:0;overflow:hidden;touch-action:manipulation;background:#121212}.menu-flipbook .page{background:#fff;overflow:auto;display:flex;align-items:center;justify-content:center;touch-action:pinch-zoom;padding-bottom:env(safe-area-inset-bottom,32px)}
